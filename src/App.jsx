@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Login from "./component/Login";
 import Register from "./component/Register";
-import Dashboard from "./component/Dashboard";
+import Dashboard from "./component/dashboard";
 
 const App = () => {
   const [isLogin, setIsLogin] = useState(true);
