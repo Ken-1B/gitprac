@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Login from "./component/Login";
 import Register from "./component/Register";
-import Dashboard from "./component/dashboard";
+import Dash from './component/Dash';
 
 const App = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -22,7 +22,7 @@ const App = () => {
       {isLogin ? (
         <Login onSwitchToRegister={() => setIsLogin(false)} onLoginSuccess={handleLoginSuccess} />
       ) : user ? (
-        <Dashboard user={user} onLogout={handleLogout} />
+        <Dash user={user} onLogout={handleLogout} />
       ) : (
         <Register onSwitchToLogin={() => setIsLogin(true)} />
       )}
